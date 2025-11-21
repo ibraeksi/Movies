@@ -15,19 +15,15 @@ def similar_movies(df, tfidf, tfidf_matrix, new_plot, langdict):
     # Add the new plot to TF-IDF matrix
     new_tfidf_matrix = sparse.vstack((tfidf_matrix, tfidf.transform(pd.DataFrame({'overview':[new_plot]})['overview'])))
 
-    # Compute the updated cosine similarity matrix
+    # Updated cosine similarity matrix
     cosine_sim = linear_kernel(new_tfidf_matrix, new_tfidf_matrix)
 
-    # Get the pairwsie similarity scores of all movies with the added plot
+    # Similarity scores with the added plot
     sim_scores = list(enumerate(cosine_sim[-1]))
 
-    # Sort the movies based on the similarity scores
+    # The 10 most similar movies
     sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
-
-    # Get the scores of the 10 most similar movies
     sim_scores = sim_scores[1:11]
-
-    # Get the movie indices
     movie_indices = [i[0] for i in sim_scores]
 
     df['release_date'] = df['release_date'].dt.strftime('%d.%m.%Y')
@@ -37,5 +33,6 @@ def similar_movies(df, tfidf, tfidf_matrix, new_plot, langdict):
     cols = ['title', 'score', 'vote_count', 'release_date', 'revenue', 'runtime',
             'budget', 'original_language', 'original_title', 'overview',
             'genres', 'production_countries', 'spoken_languages']
-    # Return the top 10 most similar movies without the added plot
-    return df[cols].iloc[movie_indices[1:]]
+    output = df[cols].iloc[movie_indices[1:]].reset_index(drop=True)
+
+    return output
