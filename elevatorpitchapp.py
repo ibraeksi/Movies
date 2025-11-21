@@ -4,6 +4,7 @@ import numpy as np
 import pickle
 import json
 import string
+from scipy import sparse
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 from sklearn.metrics.pairwise import linear_kernel
 from nltk.corpus import stopwords
