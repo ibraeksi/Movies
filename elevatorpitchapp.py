@@ -12,11 +12,11 @@ from nltk import word_tokenize
 from nltk.stem import WordNetLemmatizer
 from pathlib import Path
 
-trained_model = Path(__file__).parents[0] / 'models/weighted_rating_nlp_runtime_3genres_v01.pkl'
-fitted_tokenizer = Path(__file__).parents[0] / 'models/weighted_rating_tokenizer_v01.pkl'
-fitted_encoder = Path(__file__).parents[0] / 'models/weighted_rating_3genres_encoder_v01.pkl'
-fitted_scaler = Path(__file__).parents[0] / 'models/weighted_rating_3genres_scaler_v01.pkl'
-fitted_tfidf = Path(__file__).parents[0] / 'models/weighted_rating_tfidf_vectorizer_v01.pkl'
+trained_model = Path(__file__).parents[0] / 'models/weighted_rating_nlp_runtime_3genres_v02.pkl'
+fitted_tokenizer = Path(__file__).parents[0] / 'models/weighted_rating_tokenizer_v02.pkl'
+fitted_encoder = Path(__file__).parents[0] / 'models/weighted_rating_3genres_encoder_v02.pkl'
+fitted_scaler = Path(__file__).parents[0] / 'models/weighted_rating_3genres_scaler_v02.pkl'
+fitted_tfidf = Path(__file__).parents[0] / 'models/weighted_rating_tfidf_vectorizer_v02.pkl'
 fitted_tfidf_matrix = Path(__file__).parents[0] / 'data/processed/tfidf_matrix_v01.npz'
 tmdb_training_data = Path(__file__).parents[0] / 'data/processed/tmdb_training_data_v01.csv'
 language_dictionary = Path(__file__).parents[0] / 'data/raw/iso639_language_codes.json'
