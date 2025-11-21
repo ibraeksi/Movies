@@ -3,8 +3,12 @@ import pandas as pd
 import numpy as np
 import pickle
 import json
+import string
 from tensorflow.keras.preprocessing.sequence import pad_sequences
-from scipy import sparse
+from sklearn.metrics.pairwise import linear_kernel
+from nltk.corpus import stopwords
+from nltk import word_tokenize
+from nltk.stem import WordNetLemmatizer
 from pathlib import Path
 
 trained_model = Path(__file__).parents[0] / 'models/weighted_rating_nlp_runtime_3genres_v01.pkl'

@@ -1,8 +1,6 @@
-import numpy as np
 import pandas as pd
 from scipy import sparse
 from sklearn.metrics.pairwise import linear_kernel
-from sklearn.feature_extraction.text import TfidfVectorizer
 
 def similar_movies(df, tfidf, tfidf_matrix, new_plot, langdict):
     """
