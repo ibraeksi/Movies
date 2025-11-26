@@ -1,7 +1,7 @@
 import pandas as pd
 from scipy import sparse
 from sklearn.metrics.pairwise import cosine_similarity
-from modules.clean_sentences import clean_sentences
+from modules.clean_sentences_count import clean_sentences_count
 
 
 def similar_movies_count(df, count, count_matrix, new_plot, new_genres, langdict):
@@ -13,7 +13,7 @@ def similar_movies_count(df, count, count_matrix, new_plot, new_genres, langdict
     new_plot = User input for movie plot
     new_genres = User input for movie genres
     """
-    clean_plot = clean_sentences(new_plot)
+    clean_plot = clean_sentences_count(new_plot)
     user_input = clean_plot.split(" ")
     genre_input = []
     for genre in new_genres:
