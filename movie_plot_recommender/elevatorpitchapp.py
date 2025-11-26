@@ -1,9 +1,7 @@
 import streamlit as st
 import pandas as pd
-import numpy as np
 import pickle
 import json
-import string
 from scipy import sparse
 from pathlib import Path
 

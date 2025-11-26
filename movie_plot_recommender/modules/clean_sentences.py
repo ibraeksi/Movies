@@ -1,6 +1,6 @@
 import string
+from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
-from nltk import word_tokenize
 from nltk.stem import WordNetLemmatizer
 
 def clean_sentences(sentence):
