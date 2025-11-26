@@ -3,6 +3,8 @@ import pandas as pd
 import pickle
 import json
 from scipy import sparse
+import nltk
+nltk.download('punkt')
 from pathlib import Path
 
 fitted_count = Path(__file__).parents[0] / 'models/count_vectorizer_v01.pkl'
