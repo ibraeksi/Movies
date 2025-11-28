@@ -5,9 +5,9 @@ import json
 from scipy import sparse
 from pathlib import Path
 
-fitted_count = Path(__file__).parents[0] / 'models/count_vectorizer_v02.pkl'
-fitted_count_matrix = Path(__file__).parents[0] / 'data/processed/count_matrix_v02.npz'
-tmdb_training_data = Path(__file__).parents[0] / 'data/processed/updated_tmdb_training_data_v02.csv'
+fitted_count = Path(__file__).parents[0] / 'models/count_vectorizer_v03.pkl'
+fitted_count_matrix = Path(__file__).parents[0] / 'data/processed/count_matrix_v03.npz'
+tmdb_training_data = Path(__file__).parents[0] / 'data/processed/updated_tmdb_training_data_v03.csv'
 language_dictionary = Path(__file__).parents[0] / 'data/raw/iso639_language_codes.json'
 
 from modules.similar_movies_count import similar_movies_count
