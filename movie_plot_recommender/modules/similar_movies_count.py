@@ -39,7 +39,7 @@ def similar_movies_count(df, count, count_matrix, new_plot, new_genres, langdict
     df['original_language'] = df['original_language'].map(langdict)
 
     # Columns to be displayed
-    cols = ['title', 'vote_average', 'vote_count', 'release_date', 'revenue', 'runtime',
+    cols = ['title', 'score', 'vote_count', 'release_date', 'revenue', 'runtime',
             'budget', 'original_language', 'original_title', 'overview',
             'genres', 'production_countries', 'spoken_languages']
     output = df[cols].iloc[movie_indices[1:]].reset_index(drop=True)

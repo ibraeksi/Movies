@@ -70,3 +70,15 @@ else:
     st.markdown("Top 10 Most Similar Movies Based on the Summary")
     similardf = st.session_state["similardf"]
     st.dataframe(similardf, hide_index=True)
+
+left_score, right_score = st.columns([7, 5], vertical_alignment="top")
+with left_score:
+    st.markdown("\n\n")
+    st.markdown("""The movie score given in the table is calculated
+                based on IMDB's weighted rating formula:""")
+    st.latex(r'''Score = \left(\frac{v}{v+m}.R\right) + \left(\frac{m}{v+m}.C\right)''')
+    st.markdown("where:")
+    st.markdown("""- v is the number of votes for the movie""")
+    st.markdown("""- m is the minimum number of votes to be included in the training data""")
+    st.markdown("""- R is the average rating of the movie""")
+    st.markdown("""- C is the average rating of all movies in the training data""")
